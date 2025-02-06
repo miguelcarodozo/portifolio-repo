@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Miguel Cardozo | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px 100px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 20px;
+            align-items: center;
+            max-width: calc(100% - 160px);
+            margin: 0 auto;
+            left: auto;
+            right: auto;
+            font-size: 22px;
+            font-family: "Roboto Condensed", serif;
+            background-color: white;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 15px;
+            font-family: "Quicksand", serif;
+        }
+
+        .link {
+            position: relative;
+            text-decoration: none;
+            color: black;
+        }
+
+        .link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 3px;
+            background-color: orange;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .link:hover::after {
+            width: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #home-section {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+        }
+
+        #home-intro {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        #home-title {
+            font-size: 70px;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+        }
+
+        span {
+            color: orange;
+        }
+
+        p {
+            font-family: "Inter", serif;
+        }
+
+        #home-contact-line,
+        #home-links-docs {
+            display: flex;
+            gap: 10px;
+        }
+
+        #home-p {
+            font-size: 25px;
+        }
+
+        #home-span {
+            border-left: 3px orange solid;
+            font-size: 25px;
+            padding: 0 10px;
+            width: 270px;
+            font-family: "Poppins", serif;
+        }
+
+        #home-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cta {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid orange;
+            font-size: 18px;
+            font-family: "Rubik", serif;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .cta:hover {
+            background-color: orange;
+            color: white;
+            transition: 0.5s ease-in-out;
+        }
+
+        .icon-link:hover {
+            transform: scale(1.05);
+            transition: 0.5s ease-in-out;
+        }
+
+        #skills-section {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        h2 {
+            font-family: "Oswald", serif;
+            font-size: 50px;
+            padding: 30px;
+        }
+
+        .skills-container {
+            display: flex;
+            padding: 15px 50px;
+            gap: 20px;
+        }
+
+        .skill {
+            padding: 15px;
+        }
+
+        .skill-text {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .skills-grid p {
+            font-family: "Quicksand", serif;
+        }
+
+        progress {
+            width: 100%;
+            height: 20px;
+            background-color: #f3f3f3;
+            border-radius: 10px;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: orange;
+            border-radius: 10px;
+        }
+
+        h3 {
+            font-family: "Poppins", serif;
+        }
+
+        #projects-section {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0 40px;
+            gap: 40px;
+        }
+
+        #projects-grid {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        #load-more-btn {
+            align-self: flex-end;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+            align-items: center;
+            padding: 15px;
+        }
+
+        input {
+            width: 150px;
+        }
+
+        label {
+            float: left;
+        }
+
+        .proj-tech{
+            background-color: orange;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav-limiter">
+        <nav>
+            <div id="name">
+                <h1 id="miguel">MIGUEL <span>CARDOZO</span></h1>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#home-section" class="link">Home</a></li>
+                <li><a href="#about-section" class="link">About</a></li>
+                <li><a href="#skills-section" class="link">Skills</a></li>
+                <li><a href="#projects-section" class="link">Projects</a></li>
+                <li><a href="#contact-section" class="link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section id="home-section">
+        <div id="home-intro">
+            <p id="home-span">Computer Engineer</p>
+            <h1 id="home-title">
+                Miguel Cardozo
+            </h1>
+
+            <p id="home-p">Hi, nice to meet you! I'm a Computer Engineering student at CEFET/RJ,
+                working everyday to improve my abilites on software engineering. Contact me if you're interested on my
+                projects!
+            </p>
+
+            <div id="home-content">
+                <div id="home-links-docs">
+                    <a href="" download>
+                        <button class="cta">Download CV</button>
+                    </a>
+                    <a href="project-section">
+                        <button class="cta">Projects</button>
+                    </a>
+                </div>
+                <div id="about-me">
+                    <a href="#about-section">
+                        <button class="cta">
+                            About me ></i>
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+            <div id="home-contact-line">
+                <a href="www.linkedin.com/in/miguelcarodozo">
+                    <img width="50" height="50"
+                        src="https://img.icons8.com/ios-filled/50/1A1A1A/linkedin-circled--v1.png"
+                        alt="linkedin-circled--v1" class="icon-link" />
+                </a>
+                <a href="https://github.com/miguelcarodozo">
+                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/1A1A1A/github.png"
+                        alt="github" class="icon-link" />
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <section id="skills-section">
+        <h2>My skills</h2>
+        <div class="skills-container">
+            <div class="skills-categories">
+                <h3>Frontend</h3>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <div class="skill-text">
+                            <p>HTML</p>
+                            <p>60%</p>
+                        </div>
+                        <progress value="60" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-text">
+                            <p>CSS</p>
+                            <p>40%</p>
+                        </div>
+                        <progress value="40" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-text">
+                            <p>Javascript</p>
+                            <p>20%</p>
+                        </div>
+                        <progress value="20" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-text">
+                            <p>Bootstrap</p>
+                            <p>5%</p>
+                        </div>
+                        <progress value="5" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-categories">
+                <h3>Tools & Platforms</h3>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <div class="skill-text">
+                            <p>Git</p>
+                            <p>40%</p>
+                        </div>
+                        <progress value="40" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-text">
+                            <p>GitHub</p>
+                            <p>5%</p>
+                        </div>
+                        <progress value="5" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-categories">
+                <h3>Backend</h3>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <div class="skill-text">
+                            <p>Java</p>
+                            <p>0%</p>
+                        </div>
+                        <progress value="0" max="100"></progress>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-text">
+                            <p>C/ C++</p>
+                            <p>0%</p>
+                        </div>
+                        <progress value="0" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <section id="projects-section">
+        <h2>My Projects</h2>
+        <div id="projects-grid">
+            <div class="project">
+                <a href="pokemon-search.html">
+                    <h3>Pokemon Search App
+                    </h3>
+                    <div class="project-text">
+                        <p class="proj-description">Check if your password is strong and safe! </p>
+                        <div class="proj-tech">
+                            <p class="proj-tech-p">HTML</p>
+                            <p class="proj-tech-p">CSS</p>
+                            <p class="proj-tech-p">Javascript</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <button class="cta" id="load-more-btn">
+            Load More
+        </button>
+    </section>
+    <section id="contact-section">
+        <form>
+            <input type="text" id="input-name" placeholder="Name">
+            <input type="email" id="input-email" placeholder="Email">
+            <textarea id="message" placeholder="Message"></textarea>
+            <button type="submit" class="cta">Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>
