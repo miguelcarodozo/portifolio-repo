@@ -109,7 +109,7 @@
             gap: 10px;
         }
 
-        #home-p {
+        .home-p {
             font-size: 25px;
         }
 
@@ -219,6 +219,38 @@
             gap: 20px;
         }
 
+        .project {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            gap: 20px;
+        }
+
+        .project h3 {
+            color: orange;
+        }
+
+        .proj-tech-p {
+            color: orange;
+            border: 2px solid orange;
+            border-radius: 5px;
+            width: fit-content;
+            padding: 10px 10px;
+
+        }
+
+        .proj-tech {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .proj-links {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
         #load-more-btn {
             align-self: flex-end;
         }
@@ -238,11 +270,6 @@
 
         label {
             float: left;
-        }
-
-        .proj-tech {
-            background-color: orange;
-            color: white;
         }
     </style>
 </head>
@@ -268,8 +295,8 @@
             <h1 id="home-title">
                 Miguel Cardozo
             </h1>
-
-            <p id="home-p">Hi, nice to meet you! I'm a Computer Engineering student at CEFET/RJ,
+            <p class="home-p">Sofstware Developer</p>
+            <p class="home-p">Hi, nice to meet you! I'm a Computer Engineering student at CEFET/RJ,
                 working everyday to improve my abilites on software engineering. Contact me if you're interested on my
                 projects!
             </p>
@@ -394,13 +421,51 @@
                     <p class="proj-tech-p">CSS</p>
                     <p class="proj-tech-p">Javascript</p>
                 </div>
-                <div class="project-links">
+                <div class="proj-links">
+                    <a href="pokemon.html">
+                        <button class="cta">See project</button>
+                    </a>
+                    <a href="">
+                        <img width="40" height="40" src="https://img.icons8.com/ios-filled/50/1A1A1A/github.png"
+                            alt="github" class="icon-link" />
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Weather App
+                </h3>
+                <p class="proj-description">Check the weather on every city! </p>
+                <div class="proj-tech">
+                    <p class="proj-tech-p">HTML</p>
+                    <p class="proj-tech-p">CSS</p>
+                    <p class="proj-tech-p">Javascript</p>
+                </div>
+                <div class="proj-links">
                     <a href="weather.html">
                         <button class="cta">See project</button>
                     </a>
                     <a href="">
-                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/1A1A1A/github.png"
-                        alt="github" class="icon-link" />
+                        <img width="40" height="40" src="https://img.icons8.com/ios-filled/50/1A1A1A/github.png"
+                            alt="github" class="icon-link" />
+                    </a>
+                </div>
+            </div>
+            <div class="project">
+                <h3>To-do App
+                </h3>
+                <p class="proj-description">Use this app to list everything that you have to do on your day! </p>
+                <div class="proj-tech">
+                    <p class="proj-tech-p">HTML</p>
+                    <p class="proj-tech-p">CSS</p>
+                    <p class="proj-tech-p">Javascript</p>
+                </div>
+                <div class="proj-links">
+                    <a href="todolist.html">
+                        <button class="cta">See project</button>
+                    </a>
+                    <a href="">
+                        <img width="40" height="40" src="https://img.icons8.com/ios-filled/50/1A1A1A/github.png"
+                            alt="github" class="icon-link" />
                     </a>
                 </div>
             </div>
